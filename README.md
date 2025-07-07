@@ -3,7 +3,6 @@
 ![image](https://github.com/user-attachments/assets/5d5ab825-0dc7-4279-9923-009c3cb68f56)
 ![image](https://github.com/user-attachments/assets/eb2c263d-1887-4ffe-9127-53bb469c0859)
 ![image](https://github.com/user-attachments/assets/b16e96e5-86e2-4e4a-84e9-436ffbc74a53)
-![image](https://github.com/user-attachments/assets/836a6157-905e-4156-8fe9-e30766431a2c)
  precision    recall  f1-score   support
 
           COVID       0.88      0.96      0.92       724
