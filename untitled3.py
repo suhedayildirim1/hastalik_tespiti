@@ -90,8 +90,7 @@ drive.mount('/content/drive')
 #     class_path = os.path.join(test_folder, class_name)
 #     print(f"{class_name}: {len(os.listdir(class_path))} dosya")
 
-"""Buranın üstündeki kodlar sadece dosya ayırmaya kullanıldığından tek seferlik
-çalıştırılıyor. Tekrar çalıştırmaya gerek yok. Dosyalarda istenmeyen sonuçlar doğurabileceklerinden tekrar çalıştırılmamalı.
+
 
 """
 
@@ -191,7 +190,7 @@ for layer in base_model.layers:
     layer.trainable = TrueA
 model = Model(inputs=base_model.input, outputs=predictions)
 
-#Değişiklik gereken tek hücre burası, model üstünde oynamalar yapmam lazım.
+
 from tensorflow.keras.applications import DenseNet121, ResNet152V2, DenseNet201,DenseNet169, MobileNetV2, VGG19, VGG16
 base_model =  ResNet152V2(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
 
@@ -217,7 +216,7 @@ for layer in base_model.layers:
 # Modeli oluştur
 model_resnet = Model(inputs=base_model.input, outputs=predictions)
 
-#Değişiklik gereken tek hücre burası, model üstünde oynamalar yapmam lazım.
+
 from tensorflow.keras.applications import DenseNet121, ResNet152V2, DenseNet201,DenseNet169, MobileNetV2, VGG19, VGG16
 base_model =  MobileNetV2(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
 
@@ -757,20 +756,3 @@ plt.show()
 # print(f"\nToplam bozuk dosya test: {len(corrupted_files_test)}")
 # print(f"\nToplam bozuk dosya train: {len(corrupted_files_train)}")
 
-# !nvidia-smi
-
-# import tensorflow as tf  # Önce TensorFlow'u import edin
-
-# # GPU'ları kontrol edin
-# gpus = tf.config.list_physical_devices('GPU')
-# if gpus:
-#     try:
-#         # GPU bellek büyümesini ayarla
-#         tf.config.experimental.set_memory_growth(gpus[0], True)
-#         # GPU'ya özel batch boyutu
-#         BATCH_SIZE = 64
-#         print(f"GPU aktif: {gpus[0]}\nBatch boyutu: {BATCH_SIZE}")
-#     except RuntimeError as e:
-#         print("Hata:", e)
-# else:
-#     print("GPU bulunamadı! Runtime > Change runtime type'dan GPU seçin.")
