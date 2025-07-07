@@ -13,4 +13,6 @@ Viral Pneumonia       0.92      1.00      0.96       269
        accuracy                           0.93      4235
       macro avg       0.92      0.95      0.93      4235
    weighted avg       0.93      0.93      0.93      4235
+
+   
    ![image](https://github.com/user-attachments/assets/c337fb7f-2d55-42d3-8406-40c3c268b018)
